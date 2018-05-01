@@ -16,7 +16,7 @@ public:
         if(n==0)
             return 0;
         
-        bool flag=0;   //flag也可替换成num，这样num<2时可以接着赋值，最后可满足重复次数更多的情况
+        bool flag=0;   //flag也可替换成num，这样num<2时可以接着赋值，最后可满足需要重复次数更多的情况
         int index=0;
         for(int i=1;i<n;i++)   //遍历用
         {
