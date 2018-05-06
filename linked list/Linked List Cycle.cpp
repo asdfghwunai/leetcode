@@ -19,7 +19,7 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode *pre=head;
         ListNode *cur=head;
-        //还是快慢指针，下面循环参考了求链表中值
+        //方法还是快慢指针，下面循环参考了求链表中值
         
         int i=0,j=0;
         while(cur)
