@@ -27,10 +27,10 @@ public:
         {
            cur=cur->next->next;
            pre=pre->next;
-           if(cur==pre)
+           if(cur==pre)      
            {
                ListNode *p=head;
-               while(p!=cur)
+               while(p!=cur)   //用到一个规律
                {
                    cur=cur->next;
                    p=p->next;
