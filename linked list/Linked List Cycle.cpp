@@ -40,3 +40,25 @@ public:
         return 0;
     }
 };
+
+//-----上面的方法对链表环II没辙了
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        if(head==NULL||head->next==NULL)
+            return 0;
+        ListNode *pre=head;
+        ListNode *cur=head;
+        
+        while(cur&&cur->next)   //醉了，判断cur是为了cur->next，判断cur->next是为了cur->next->next
+        {
+            pre=pre->next;
+            cur=cur->next->next;
+            if(pre==cur)
+                return 1;
+            
+        }
+        
+        return 0;
+    }
+};
