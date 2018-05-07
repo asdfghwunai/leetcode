@@ -18,7 +18,7 @@ The new list should be made by splicing together the nodes of the first two list
 class Solution {
 public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
-        //方法  ---自底向下,递归解决，也是归并排序思想
+        //方法  ---自底向下,递归解决，这其实就是归并排序中融合俩数组的地方，数组融合是迭代解决，这里只能递归吗
         ListNode *head=NULL;
         if(l1==NULL)
             return l2;
