@@ -41,7 +41,7 @@ public:
     }
 };
 
-//-----上面的方法对链表环II没辙了
+//-----上面的方法对链表环II没辙了,你可以推一下
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
