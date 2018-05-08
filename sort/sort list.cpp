@@ -39,8 +39,11 @@ public:
     }
     */
     
+    
+    //方法----用到了归并排序的链表版，链表分段是用快慢指针，数组分段是根据长度，链表遍历根据指针，数组遍历根据下标
     ListNode *merge2(ListNode *l1,ListNode *l2)   ////扩展：之所以可以用一维指针，因为里面操作的是l1->next,并没有改l1和l2本身的值
     {
+        
         ListNode *head=NULL;
         if(l1==NULL)    //俩终止条件
         {
@@ -52,6 +55,8 @@ public:
             head=l1;
             return head;
         }
+        
+      
         
         //融合像归并排序中数组融合那样就行了,还是挺简单的
         ListNode *dummy=new ListNode(-1);
@@ -89,7 +94,7 @@ public:
             return head;   //不用排了
         
         ListNode *slow=head;
-        ListNode *fast=head;
+        ListNode *fast=head->next;    //这里千万不能写成fast-head; 应该是1->2->NULL 时 first为1，last为2 
         while(fast!=NULL&&fast->next!=NULL)   //找到链表中间
         {
             slow=slow->next;
@@ -106,8 +111,10 @@ public:
         
         ListNode *p1=sortList(head);
         ListNode *p2=sortList(fast);
-        ListNode *tou=merge2(p1,p2);
         
+        
+        ListNode *tou=merge2(p1,p2);
         return tou;
+       
     }
 };
