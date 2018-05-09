@@ -22,8 +22,8 @@ public:
         if(head==NULL || head->next==NULL)
             return NULL;
         
-       
-        while(cur&&cur->next)
+       //如果结点个数是偶数个的话，slow指向中间两个元素的右边那个 比如1->2->NULL,slow是2，fast是null，和sort list不太一样
+        while(cur&&cur->next)    
         {
            cur=cur->next->next;
            pre=pre->next;
