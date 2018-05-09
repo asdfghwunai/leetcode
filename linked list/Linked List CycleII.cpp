@@ -23,6 +23,7 @@ public:
             return NULL;
         
        //如果结点个数是偶数个的话，slow指向中间两个元素的右边那个 比如1->2->NULL,slow是2，fast是null，和sort list不太一样
+       //我知道为啥slow和cur一开始都是head了，因为要满足slow走s步，fast走2s步，但是这个返回的中点不是标准中点
         while(cur&&cur->next)    
         {
            cur=cur->next->next;
